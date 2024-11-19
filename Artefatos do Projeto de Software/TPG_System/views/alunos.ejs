@@ -1,0 +1,32 @@
+<%-include ('partials/header.ejs')%>
+<div class="container-fluid distancia3 plano-de-fundo3">
+  <%-include ('partials/navbar.ejs')%>
+  <div class="row distancia d-flex m-5 align-items-center">
+    <table class="table">
+      <thead class="table-dark">
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">RA</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Senha</th>
+        <th colspan="2">Ações:</th>
+      </thead>
+      <tbody>
+        <%alunos.forEach(aluno=>{%>
+        <tr>
+          <td><%= aluno.id%></td>
+          <td><%= aluno.nome%></td>
+          <td><%= aluno.endereco%></td>
+          <td><%= aluno.ra%></td>
+          <td><%= aluno.email%></td>
+          <td><%= aluno.senha%></td>
+          <td><a href="/alunos/editar/<%= aluno.id %>" class="btn btn-warning fw-bold">Editar</a></td>
+          <td><a href="/alunos/deletar/<%= aluno.id %>" class="btn btn-danger fw-bold">Excluir</a></td>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%-include ('partials/footer.ejs')%>

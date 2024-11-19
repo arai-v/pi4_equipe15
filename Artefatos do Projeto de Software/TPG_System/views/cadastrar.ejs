@@ -1,0 +1,33 @@
+<%-include('partials/header.ejs')%>
+    <!-- Login -->
+        <div class="container-fluid plano-de-fundo3">
+            <%-include('partials/navbar.ejs')%>
+            <div class="row mt-5">
+                <h2 class="text-white fw-bold d-flex align-items-center justify-content-center comprimento">Selecione uma das opções para cadastro abaixo:</h2>
+            </div>
+                <div class="row row-cols-1 row-cols-md-4 g-4 d-flex align-items-center distancia">
+                    <div class="col"></div>
+                    <div class="col d-flex justify-content-center">
+                      <div class="card" style="width: 20rem;">
+                        <div class="card-body">
+                          <h3 class="card-title text-center">Professor</h3>
+                          <p class="card-text fs-5 mt-4">Acessar a plataforma do TPG System como professor. Como professor você poderá criar suas turmas e verificar o desempenho de seus alunos nas atividades</p>
+                          <a href="/cadastrarProf" class="btn btn-primary mt-3">Entrar</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col d-flex justify-content-center">
+                      <div class="card" style="width: 20rem;">
+                        <div class="card-body">
+                          <h3 class="card-title text-center">Aluno</h3>
+                          <p class="card-text fs-5 mt-4">Acessar a plataforma do TPG System como Aluno. Como aluno você poderá participar de aventuras pedagócias, para aprender habilidades de uma nova forma</p>
+                          <a href="/cadastrarAluno" class="btn btn-primary mt-3">Entrar</a>
+                        </div>
+                      </div>
+                      <div class="col">
+                      </div>
+                    </div>
+                  </div>
+        </div>
+    <!-- Fim Login -->
+<%-include('partials/script.ejs')%>

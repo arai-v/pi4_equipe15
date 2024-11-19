@@ -1,0 +1,64 @@
+<%-include('partials/header.ejs')%>
+<div class="container-fluid distancia3 plano-de-fundo-2">
+            <div class="row">
+                <div class="col"></div>
+            </div>
+            <div class="row mt-5">
+                <div class="d-flex justify-content-center">
+                    <div class="col-4">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-5">
+                <div class="col-4 d-flex distancia3 bg-dark text-white rounded-4 justify-content-center">
+                    <div class="row align-items-center">
+                        <form action="/alunos/update/<%= aluno.id%>" method="POST">
+                            <div class="text-center altura">
+                                <label class="fw-bold fs-3">Edição de Aluno</label>
+                            </div>
+                            <div class="row g-5">
+                                <div class="col-md">
+                                  <div>
+                                    <label class="form-label fs-5 fw-semi-bold mt-5">Nome:</label>
+                              <input type="text" class="form-control border-0 border-bottom border-secondary" value="<%= aluno.nome%>" id="nome" name="nome" required>
+                                  </div>
+                                </div>
+                                <div class="col-md"><div>
+                                    <label class="form-label fs-5 fw-semi-bold mt-5">Endereço:</label>
+                              <input type="text" class="form-control border-0 border-bottom border-secondary" value="<%= aluno.endereco%>" id="endereco" name="endereco" required>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row g-5">
+                                <div class="col-md"><div>
+                                    <label class="form-label fs-5 fw-semi-bold mt-5">RA:</label>
+                              <input type="text" class="form-control border-0 border-bottom border-secondary" value="<%= aluno.ra%>" id="ra" name="ra" required>
+                                  </div>
+                                </div>
+                                <div class="col-md">
+                                  <div>
+                                    <label class="form-label fs-5 fw-semi-bold mt-5">E-mail:</label>
+                              <input type="text" class="form-control border-0 border-bottom border-secondary" value="<%= aluno.email%>" id="email" name="email" required>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row g-5">
+                                <div class="col-md">
+                                  <div>
+                                    <label class="form-label fs-5 fw-semi-bold mt-5">Senha:</label>
+                              <input type="text" class="form-control border-0 border-bottom border-secondary" value="<%= aluno.senha%>" id="senha" name="senha" required>
+                                  </div>
+                                </div>
+                                <div class="col-md">
+                                    <input type="hidden" class="form-control border-0 border-bottom border-secondary" value="<%= aluno.id%>" name="id" required>
+                                </div>
+                                </div>
+                                <div class="row d-flex justify-content mt-5">
+                                    <button type="submit" class="btn btn-primary">Alterar</button>
+                                  </div>
+                              </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+<%-include('partials/footer.ejs')%>
